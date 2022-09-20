@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
 
-using Webmaster442.WinTerminalInteract.Internals;
+using Webmaster442.WindowsTerminalFragment.Internals;
 
-namespace Webmaster442.WinTerminalInteract;
+namespace Webmaster442.WindowsTerminalFragment;
 internal static class TerminalFragmentFile
 {
     public static void Write(string targetFile, TerminalFragment terminalFragment)
@@ -20,7 +20,7 @@ internal static class TerminalFragmentFile
     public static TerminalFragment Read(string sourceFile)
     {
         string json = File.ReadAllText(sourceFile);
-        var result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionFactory.Create());
+        TerminalFragment? result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionFactory.Create());
 
         if (result == null)
             throw new InvalidOperationException("invalid terminal fragment document");
@@ -31,7 +31,7 @@ internal static class TerminalFragmentFile
     public static async Task<TerminalFragment> ReadAsync(string sourceFile, CancellationToken cancellationToken = default)
     {
         string json = await File.ReadAllTextAsync(sourceFile, cancellationToken);
-        var result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionFactory.Create());
+        TerminalFragment? result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionFactory.Create());
 
         if (result == null)
             throw new InvalidOperationException("invalid terminal fragment document");

@@ -1,4 +1,4 @@
-﻿namespace Webmaster442.WinTerminalInteract.Internals;
+﻿namespace Webmaster442.WindowsTerminalFragment.Internals;
 
 internal static class ColorParser
 {

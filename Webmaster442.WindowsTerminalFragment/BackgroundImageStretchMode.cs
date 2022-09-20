@@ -1,4 +1,4 @@
-﻿namespace Webmaster442.WinTerminalInteract;
+﻿namespace Webmaster442.WindowsTerminalFragment;
 
 /// <summary>
 /// This sets how the background image is resized to fill the window.

@@ -1,4 +1,4 @@
-﻿namespace Webmaster442.WinTerminalInteract;
+﻿namespace Webmaster442.WindowsTerminalFragment;
 
 public enum FontWeight
 {

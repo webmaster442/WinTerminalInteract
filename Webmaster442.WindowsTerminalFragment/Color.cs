@@ -1,6 +1,6 @@
-﻿using Webmaster442.WinTerminalInteract.Internals;
+﻿using Webmaster442.WindowsTerminalFragment.Internals;
 
-namespace Webmaster442.WinTerminalInteract;
+namespace Webmaster442.WindowsTerminalFragment;
 public record struct Color
 {
     public Color(byte r, byte g, byte b, byte a)

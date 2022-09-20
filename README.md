@@ -1,2 +1,3 @@
-# WinTerminalInteract
-Windows terminal profile generator lib
+# Webmaster442.WindowsTerminalFragment
+
+A C# library for reading and writing Windows terminal fragment files

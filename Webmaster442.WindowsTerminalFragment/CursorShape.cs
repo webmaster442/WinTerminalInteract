@@ -1,4 +1,4 @@
-﻿namespace Webmaster442.WinTerminalInteract;
+﻿namespace Webmaster442.WindowsTerminalFragment;
 
 /// <summary>
 /// This sets the cursor shape for the profile. The possible cursors are as follows: "bar" ( ┃ ), "vintage" ( ▃ ), "underscore" ( ▁ ), "filledBox" ( █ ), "emptyBox" ( ▯ ), "doubleUnderscore" ( ‗ )

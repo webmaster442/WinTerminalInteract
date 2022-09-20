@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Webmaster442.WinTerminalInteract.Internals;
+namespace Webmaster442.WindowsTerminalFragment.Internals;
 internal static class SerializerOptionFactory
 {
     public static JsonSerializerOptions Create()

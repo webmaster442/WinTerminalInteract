@@ -1,4 +1,4 @@
-﻿namespace Webmaster442.WinTerminalInteract;
+﻿namespace Webmaster442.WindowsTerminalFragment;
 
 /// <summary>
 /// This sets how the background image aligns to the boundaries of the window.
