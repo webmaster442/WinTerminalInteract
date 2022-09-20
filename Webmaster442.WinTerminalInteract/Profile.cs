@@ -1,6 +1,6 @@
 ﻿namespace Webmaster442.WinTerminalInteract;
 
-public class Profile
+public sealed class Profile
 {
     /// <summary>
     /// Profiles can use a GUID as a unique identifier. To make a profile your default profile, it needs a GUID for the defaultProfile global setting.

@@ -1,6 +1,6 @@
 ﻿namespace Webmaster442.WinTerminalInteract;
 
-public class TerminalSettings
+public sealed class TerminalSettings
 {
     /// <summary>
     /// Set the default profile that opens by typing ctrl+shift+t, typing the key binding assigned to newTab, running wt new-tab without specifying a profile, or clicking the '+' icon.
