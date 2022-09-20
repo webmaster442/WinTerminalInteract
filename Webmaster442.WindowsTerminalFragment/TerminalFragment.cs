@@ -7,12 +7,22 @@
 /// </summary>
 public sealed class TerminalFragment
 {
+    /// <summary>
+    /// Creates a new instance of TerminalFragment
+    /// </summary>
     public TerminalFragment()
     {
         Profiles = new List<Profile>();
         Themes = new List<Theme>();
     }
 
+    /// <summary>
+    /// Profiles contained in the fragment
+    /// </summary>
     public List<Profile> Profiles { get; }
+
+    /// <summary>
+    /// Themes contained in the fragment
+    /// </summary>
     public List<Theme> Themes { get; }
 }

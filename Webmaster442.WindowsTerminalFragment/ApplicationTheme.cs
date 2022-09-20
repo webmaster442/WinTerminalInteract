@@ -5,7 +5,16 @@
 /// </summary>
 public enum ApplicationTheme
 {
+    /// <summary>
+    /// use the same theme as Windows
+    /// </summary>
     System,
+    /// <summary>
+    /// use Dark theme
+    /// </summary>
     Dark,
+    /// <summary>
+    /// use Light theme
+    /// </summary>
     Light,
 }

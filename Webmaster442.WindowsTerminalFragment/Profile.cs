@@ -1,5 +1,8 @@
 ﻿namespace Webmaster442.WindowsTerminalFragment;
 
+/// <summary>
+/// Represents the Terminal Profile settings
+/// </summary>
 public sealed class Profile
 {
     private bool _useAcrylic;
@@ -25,7 +28,7 @@ public sealed class Profile
     public string Commandline { get; set; }
 
     /// <summary>
-    /// This sets the icon that displays within the tab, dropdown menu, jumplist, and tab switcher. File location as a string, or an emoji 
+    /// This sets the icon that displays within the tab, dropdown menu, jumplist, and tab switcher. File location as a string, or an emoji
     /// </summary>
     public string? Icon { get; set; }
 
@@ -110,10 +113,7 @@ public sealed class Profile
         set
         {
             _useAcrylic = value;
-            if (value)
-                Opacity = 50;
-            else
-                Opacity = 100;
+            Opacity = value ? 50 : 100;
         }
     }
 
@@ -143,6 +143,9 @@ public sealed class Profile
     /// </summary>
     public int Opacity { get; set; }
 
+    /// <summary>
+    /// Creates a new instance of Profile
+    /// </summary>
     public Profile()
     {
         Name = string.Empty;

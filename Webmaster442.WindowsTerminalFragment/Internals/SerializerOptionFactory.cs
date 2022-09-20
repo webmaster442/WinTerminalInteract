@@ -10,6 +10,8 @@ internal static class SerializerOptionFactory
         {
             WriteIndented = true,
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+            NumberHandling = JsonNumberHandling.WriteAsString,
         };
         options.Converters.Add(new JsonStringEnumConverter());
         options.Converters.Add(new JsonColorStringConverter());
