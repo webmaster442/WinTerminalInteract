@@ -2,7 +2,7 @@
 
 public sealed record class Thickness
 {
-    public Thickness(double left, double top, double right, double bottom)
+    public Thickness(int left, int top, int right, int bottom)
     {
         Left = left;
         Top = top;
@@ -10,7 +10,7 @@ public sealed record class Thickness
         Bottom = bottom;
     }
 
-    public Thickness(double uniform)
+    public Thickness(int uniform)
     {
         Left = uniform;
         Top = uniform;
@@ -18,7 +18,7 @@ public sealed record class Thickness
         Bottom = uniform;
     }
 
-    public Thickness(double horizontal, double vertical)
+    public Thickness(int horizontal, int vertical)
     {
         Left = horizontal;
         Right = horizontal;
@@ -26,8 +26,8 @@ public sealed record class Thickness
         Bottom = vertical;
     }
 
-    public double Left { get; }
-    public double Top { get; }
-    public double Right { get; }
-    public double Bottom { get; }
+    public int Left { get; }
+    public int Top { get; }
+    public int Right { get; }
+    public int Bottom { get; }
 }

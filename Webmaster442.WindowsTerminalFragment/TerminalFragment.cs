@@ -2,6 +2,8 @@
 
 /// <summary>
 /// JSON fragment extensions are snippets of JSON that application developers can write to add new profiles to users' settings, or even modify certain existing profiles. They can also be used to add new color schemes to users' settings.
+/// https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions
+/// https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general
 /// </summary>
 public sealed class TerminalFragment
 {

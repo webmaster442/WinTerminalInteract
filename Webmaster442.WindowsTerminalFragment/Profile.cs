@@ -27,7 +27,7 @@ public sealed class Profile
     /// <summary>
     /// This sets the icon that displays within the tab, dropdown menu, jumplist, and tab switcher. File location as a string, or an emoji 
     /// </summary>
-    public string Icon { get; set; }
+    public string? Icon { get; set; }
 
     /// <summary>
     /// This is the name of the color scheme used in the profile. Color schemes are defined in the schemes object. More detailed information can be found on the Color schemes page.
@@ -118,6 +118,11 @@ public sealed class Profile
     }
 
     /// <summary>
+    /// This sets the file location of the image to draw over the window background. The background image can be a .jpg, .png, or .gif file. "desktopWallpaper" will set the background image to the desktop's wallpaper.
+    /// </summary>
+    public string? BackgroundImage { get; set; }
+
+    /// <summary>
     /// This sets how the background image is resized to fill the window.
     /// </summary>
     public BackgroundImageStretchMode BackgroundImageStretchMode { get; set; }
@@ -143,7 +148,6 @@ public sealed class Profile
         Name = string.Empty;
         Commandline = string.Empty;
         StartingDirectory = "%USERPROFILE%";
-        Icon = string.Empty;
         TabTitle = string.Empty;
         ColorScheme = "Campbell";
         Font = new Font();

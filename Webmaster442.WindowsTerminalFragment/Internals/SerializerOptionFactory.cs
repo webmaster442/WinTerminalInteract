@@ -13,6 +13,8 @@ internal static class SerializerOptionFactory
         };
         options.Converters.Add(new JsonStringEnumConverter());
         options.Converters.Add(new JsonColorStringConverter());
+        options.Converters.Add(new JsonThicknessStringConverter());
+        options.Converters.Add(new JsonGuidStringConverter());
         return options;
     }
 }
