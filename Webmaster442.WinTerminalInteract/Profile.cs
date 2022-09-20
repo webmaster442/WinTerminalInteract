@@ -2,6 +2,8 @@
 
 public sealed class Profile
 {
+    private bool _useAcrylic;
+
     /// <summary>
     /// Profiles can use a GUID as a unique identifier. To make a profile your default profile, it needs a GUID for the defaultProfile global setting.
     /// </summary>
@@ -67,6 +69,9 @@ public sealed class Profile
     /// </summary>
     public int HistorySize { get; set; }
 
+    /// <summary>
+    /// his sets the padding around the text within the window. This will accept three different formats: "#" and # set the same padding for all sides, "#, #" sets the same padding for left-right and top-bottom, and "#, #, #, #" sets the padding individually for left, top, right, and bottom.
+    /// </summary>
     public Thickness Padding { get; set; }
 
     /// <summary>
@@ -99,7 +104,39 @@ public sealed class Profile
     /// <summary>
     /// When this is set to true, the window will have an acrylic background. When it's set to false, the window will have a plain, untextured background. The transparency only applies to focused windows due to OS limitations.
     /// </summary>
-    public bool UseAcrylic { get; set; }
+    public bool UseAcrylic
+    {
+        get => _useAcrylic;
+        set
+        {
+            _useAcrylic = value;
+            if (value)
+                Opacity = 50;
+            else
+                Opacity = 100;
+        }
+    }
+
+    /// <summary>
+    /// This sets how the background image is resized to fill the window.
+    /// </summary>
+    public BackgroundImageStretchMode BackgroundImageStretchMode { get; set; }
+
+    /// <summary>
+    /// This sets how the background image aligns to the boundaries of the window.
+    /// </summary>
+    public BackgroundImageAlignment BackgroundImageAlignment { get; set; }
+
+    /// <summary>
+    /// This sets the transparency of the background image.
+    /// </summary>
+    public float BackgroundImageOpacity { get; set; }
+
+    /// <summary>
+    /// This sets the transparency of the window for the profile. This accepts an integer value from 0-100, representing a "percent opaque". 100 is "fully opaque", 50 is semi-transparent, and 0 is fully transparent.
+    /// When useAcrylic is set to true, the window will use the acrylic material to create a blurred background for the terminal. When useAcrylic is set to false, the terminal will use a unblurred opacity.
+    /// </summary>
+    public int Opacity { get; set; }
 
     public Profile()
     {
@@ -119,5 +156,9 @@ public sealed class Profile
         CursorShape = CursorShape.Bar;
         Padding = new Thickness(8);
         Guid = Guid.NewGuid();
+        BackgroundImageStretchMode = BackgroundImageStretchMode.UniformToFill;
+        BackgroundImageAlignment = BackgroundImageAlignment.Center;
+        BackgroundImageOpacity = 1.0f;
+        Opacity = 100;
     }
 }
