@@ -27,7 +27,7 @@
         }
 
         public double Left { get; }
-        public double Top { get;}
+        public double Top { get; }
         public double Right { get; }
         public double Bottom { get; }
     }

@@ -2,7 +2,7 @@
 
 public enum FontWeight
 {
-    Normal, 
+    Normal,
     Thin,
     ExtraLight, //Extra-light,
     Light,
@@ -11,6 +11,6 @@ public enum FontWeight
     SemiBold, //Semi-bold,
     Bold,
     ExtraBold, //Extra-bold
-    Black, 
+    Black,
     ExtraBlack //Extra-black
 }

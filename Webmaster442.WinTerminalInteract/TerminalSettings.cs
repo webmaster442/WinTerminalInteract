@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-
-namespace Webmaster442.WinTerminalInteract;
+﻿namespace Webmaster442.WinTerminalInteract;
 
 public class TerminalSettings
 {
