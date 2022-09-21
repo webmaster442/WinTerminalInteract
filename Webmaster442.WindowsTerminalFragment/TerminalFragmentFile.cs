@@ -7,20 +7,20 @@ internal static class TerminalFragmentFile
 {
     public static void Write(string targetFile, TerminalFragment terminalFragment)
     {
-        string json = JsonSerializer.Serialize(terminalFragment, SerializerOptionFactory.Create());
+        string json = JsonSerializer.Serialize(terminalFragment, SerializerOptionProvider.SerializerOptions);
         File.WriteAllText(targetFile, json);
     }
 
     public static async Task WriteAsync(string targetFile, TerminalFragment terminalFragment, CancellationToken cancellationToken = default)
     {
-        string json = JsonSerializer.Serialize(terminalFragment, SerializerOptionFactory.Create());
+        string json = JsonSerializer.Serialize(terminalFragment, SerializerOptionProvider.SerializerOptions);
         await File.WriteAllTextAsync(targetFile, json, cancellationToken);
     }
 
     public static TerminalFragment Read(string sourceFile)
     {
         string json = File.ReadAllText(sourceFile);
-        TerminalFragment? result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionFactory.Create());
+        TerminalFragment? result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionProvider.SerializerOptions);
 
         if (result == null)
             throw new InvalidOperationException("invalid terminal fragment document");
@@ -31,7 +31,7 @@ internal static class TerminalFragmentFile
     public static async Task<TerminalFragment> ReadAsync(string sourceFile, CancellationToken cancellationToken = default)
     {
         string json = await File.ReadAllTextAsync(sourceFile, cancellationToken);
-        TerminalFragment? result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionFactory.Create());
+        TerminalFragment? result = JsonSerializer.Deserialize<TerminalFragment>(json, SerializerOptionProvider.SerializerOptions);
 
         if (result == null)
             throw new InvalidOperationException("invalid terminal fragment document");

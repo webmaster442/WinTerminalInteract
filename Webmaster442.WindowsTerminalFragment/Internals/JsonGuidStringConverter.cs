@@ -6,7 +6,7 @@ internal class JsonGuidStringConverter : JsonConverter<Guid>
 {
     public override Guid Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        var input = reader.GetString();
+        string? input = reader.GetString();
 
         if (string.IsNullOrEmpty(input))
             return Guid.Empty;

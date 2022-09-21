@@ -1,5 +1,8 @@
 ﻿namespace Webmaster442.WindowsTerminalFragment;
 
+/// <summary>
+/// Represents font settings
+/// </summary>
 public class Font
 {
     /// <summary>
@@ -17,6 +20,9 @@ public class Font
     /// </summary>
     public FontWeight Weight { get; set; }
 
+    /// <summary>
+    /// Creates a new instance of Font
+    /// </summary>
     public Font()
     {
         Face = "Cascadia Mono";

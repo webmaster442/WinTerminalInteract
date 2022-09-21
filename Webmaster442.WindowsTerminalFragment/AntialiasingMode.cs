@@ -5,7 +5,16 @@
 /// </summary>
 public enum AntialiasingMode
 {
+    /// <summary>
+    /// Grayscale
+    /// </summary>
     Grayscale,
+    /// <summary>
+    /// Cleartype
+    /// </summary>
     Cleartype,
+    /// <summary>
+    /// Aliased
+    /// </summary>
     Aliased
 }

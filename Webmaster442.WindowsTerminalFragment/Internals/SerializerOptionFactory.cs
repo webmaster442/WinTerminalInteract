@@ -2,21 +2,21 @@
 using System.Text.Json.Serialization;
 
 namespace Webmaster442.WindowsTerminalFragment.Internals;
-internal static class SerializerOptionFactory
+internal static class SerializerOptionProvider
 {
-    public static JsonSerializerOptions Create()
+    public static readonly JsonSerializerOptions SerializerOptions = new()
     {
-        JsonSerializerOptions options = new JsonSerializerOptions
+        WriteIndented = true,
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        NumberHandling = JsonNumberHandling.WriteAsString,
+        Converters =
         {
-            WriteIndented = true,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-            NumberHandling = JsonNumberHandling.WriteAsString,
-        };
-        options.Converters.Add(new JsonStringEnumConverter());
-        options.Converters.Add(new JsonColorStringConverter());
-        options.Converters.Add(new JsonThicknessStringConverter());
-        options.Converters.Add(new JsonGuidStringConverter());
-        return options;
-    }
+            new JsonFontWeightStringConverter(),
+            new JsonStringEnumConverter(),
+            new JsonColorStringConverter(),
+            new JsonThicknessStringConverter(),
+            new JsonGuidStringConverter(),
+        }
+    };
 }
