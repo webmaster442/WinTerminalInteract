@@ -1,4 +1,6 @@
-﻿using Webmaster442.WindowsTerminalFragment.Internals;
+﻿using System.Text;
+
+using Webmaster442.WindowsTerminalFragment.Internals;
 
 namespace Webmaster442.WindowsTerminalFragment;
 
@@ -77,4 +79,22 @@ public record struct Color
     /// Alpha value
     /// </summary>
     public byte A { get; }
+
+    /// <summary>
+    /// Converts the color to RGBA string
+    /// </summary>
+    /// <returns>an RGBA string</returns>
+    public string ToRgbaString()
+    {
+        StringBuilder sb = new();
+        sb.Append('#');
+        sb.Append(Convert.ToString(R, 16).PadLeft(2, '0'));
+        sb.Append(Convert.ToString(G, 16).PadLeft(2, '0'));
+        sb.Append(Convert.ToString(B, 16).PadLeft(2, '0'));
+        if (A != 255)
+        {
+            sb.Append(Convert.ToString(A, 16).PadLeft(2, '0'));
+        }
+        return sb.ToString();
+    }
 }

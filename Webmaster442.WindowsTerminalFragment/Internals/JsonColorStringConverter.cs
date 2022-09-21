@@ -13,15 +13,6 @@ internal class JsonColorStringConverter : JsonConverter<Color>
 
     public override void Write(Utf8JsonWriter writer, Color value, JsonSerializerOptions options)
     {
-        StringBuilder sb = new();
-        sb.Append('#');
-        sb.Append(Convert.ToString(value.R, 16).PadLeft(2, '0'));
-        sb.Append(Convert.ToString(value.G, 16).PadLeft(2, '0'));
-        sb.Append(Convert.ToString(value.B, 16).PadLeft(2, '0'));
-        if (value.A != 255)
-        {
-            sb.Append(Convert.ToString(value.A, 16).PadLeft(2, '0'));
-        }
-        writer.WriteStringValue(sb.ToString());
+        writer.WriteStringValue(value.ToRgbaString());
     }
 }

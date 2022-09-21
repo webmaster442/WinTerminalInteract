@@ -1,0 +1,14 @@
+﻿@using Webmaster442.WindowsTerminalFragment
+
+<ColorSelector Label="Background" InColor="@Theme.Background" />
+<ColorSelector Label="Cursor Color" InColor="@Theme.CursorColor" />
+<ColorSelector Label="Foreground" InColor="@Theme.Foreground" />
+<ColorSelector Label="Selection Background" InColor="@Theme.SelectionBackground" />
+
+
+@code {
+
+    [Parameter]
+    [EditorRequired]
+    public Theme Theme { get; set; }
+}

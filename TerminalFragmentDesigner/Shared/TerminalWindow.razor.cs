@@ -8,9 +8,11 @@ namespace TerminalFragmentDesigner.Shared
     {
 
         [Parameter]
+        [EditorRequired]
         public Profile Profile { get; set; }
 
         [Parameter]
+        [EditorRequired]
         public Theme Theme { get; set; }
     }
 }

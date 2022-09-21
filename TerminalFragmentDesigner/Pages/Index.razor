@@ -1,37 +1,39 @@
 ﻿@page "/"
 
-<div class="min-h-full">
-    <header class="bg-white shadow">
-        <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Windows Terminal Fragment Designer</h1>
-        </div>
-    </header>
+<div class="mx-8 fixed">
+    <h1 class="text-3xl my-8 font-bold tracking-tight text-gray-900">Windows Terminal Fragment Designer</h1>
+    <TerminalWindow Theme="@Theme" Profile="@Profile" />
 
+    <h3 class="font-medium my-8 leading-tight text-2xl mt-0 mb-2">Links &amp; Resources</h3>
+
+    <ul class="list-disc">
+        <li><a target="_blank" href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701">Download Windows terminal</a></li>
+        <li><a target="_blank" href="https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions">Terminal fragment extensions</a></li>
+        <li><a target="_blank" href="https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general">Terminal profile settings documentation</a></li>
+    </ul>
+
+</div>
+
+<div class="min-h-full">
     <main class="grid grid-cols-2 gap-16">
-        <div class="mx-8">
-            <TerminalWindow Theme="@Theme" Profile="@Profile" />
+        <div>
+            &nbsp;
         </div>
         <div>
             <details open>
-                <summary>Fonts</summary>
+                <summary class="text-lg">Fonts</summary>
             </details>
             <details open>
-                <summary>Backgound image</summary>
+                <summary class="text-lg">Backgound image</summary>
             </details>
             <details open>
-                <summary>Colors</summary>
+                <summary class="text-lg">Application Colors</summary>
+                <AppColors Theme="@Theme" />
+            </details>
+            <details open>
+                <summary class="text-lg">Color palette</summary>
+                <Colors Theme="@Theme" />
             </details>
         </div>
     </main>
 </div>
-
-
-<!--
-<h3 class="font-medium leading-tight text-2xl mt-0 mb-2">Links &amp; Resources</h3>
-
-<ul class="list-disc">
-    <li><a target="_blank" href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701">Download Windows terminal</a></li>
-    <li><a target="_blank" href="https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions">Terminal fragment extensions</a></li>
-    <li><a target="_blank" href="https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general">Terminal profile settings documentation</a></li>
-</ul>
--->

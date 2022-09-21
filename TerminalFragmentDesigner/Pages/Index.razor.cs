@@ -12,5 +12,6 @@ namespace TerminalFragmentDesigner.Pages
             Profile = new Profile();
             Theme = new Theme("Default");
         }
+
     }
 }
