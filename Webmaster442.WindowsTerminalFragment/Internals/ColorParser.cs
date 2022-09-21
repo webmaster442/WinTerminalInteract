@@ -53,7 +53,10 @@ internal static class ColorParser
         foreach (char c in input)
         {
             if (c == '#')
+            {
                 hashMark++;
+                continue;
+            }
 
             if (IsHexChar(c))
             {

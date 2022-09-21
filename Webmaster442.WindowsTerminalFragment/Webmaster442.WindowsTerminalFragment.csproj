@@ -9,4 +9,8 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="TerminalFragment.Tests"/>
+  </ItemGroup>
+
 </Project>
