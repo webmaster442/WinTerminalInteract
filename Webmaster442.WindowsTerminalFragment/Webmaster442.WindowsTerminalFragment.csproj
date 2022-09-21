@@ -7,10 +7,18 @@
     <AnalysisLevel>latest</AnalysisLevel>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <IsPublishable>True</IsPublishable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>A Windows Terminal Fragment interaction libary</Description>
+    <Copyright>webmaster442</Copyright>
+    <PackageProjectUrl>https://github.com/webmaster442/WindowsTerminalFragment</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/webmaster442/WindowsTerminalFragment</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>windows;terminal;fragment;windows-terminal</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="TerminalFragment.Tests"/>
+    <InternalsVisibleTo Include="TerminalFragment.Tests" />
   </ItemGroup>
 
 </Project>
